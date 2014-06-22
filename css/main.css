@@ -1,0 +1,91 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'sans-serif';
+}
+body {
+    background: #fffff8;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #393939;
+}
+a {
+    text-decoration: none;
+    color: #6699cc;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+.paper {
+    color: #393939;
+}
+.paper:hover {
+    color: #99cc99;
+}
+/*-Header and Menu-*/
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.home-menu.pure-menu-open {
+    background: #2d2d2d;
+}
+.pure-menu.pure-menu-open.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 350;
+    font-size: 110%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+.home-menu a {
+    color: #b9ca4a;
+}
+.home-menu li a:hover,
+.home-menu li a:focus 
+{
+    background: none;
+    color: #ff9e03;
+}
+.header {
+     margin: 0;
+     text-align: center;
+     padding: 2.5em 2em 0;
+     border-bottom: 1px solid #eee;
+ }
+/*-Content-*/
+main{
+ padding: 2px;
+}
+.content {
+    color: #515151;
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+}
+.content-subhead {
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    letter-spacing: 0.1em;
+}

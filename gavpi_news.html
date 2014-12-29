@@ -38,13 +38,26 @@
         <div class="content"> 
             
             <h3>News</h3>
-            		<p>12/18/14</p>
+			
+			<p>12/29/14</p>
+			
+            <p>Current focus is on adding logical triggers and database component, which is quite a bit of work. Once this is complete, I'm switching focus on upgrading ease of use (easier profile editing) and fixing the bugs currently present.</p>
+
+            <p>As a preview, the idea behind the new components is to maintain a simple database of variables which can be set, updated and queried using triggers and actions, these are in turn used to provide logic driven actions.</p>
+            
+            <p>Use case: you wish to maintain a count of the number of times you have fired your missiles. You create a database variable in the profile editor with some initial amount, say 10. Create a normal vi_phrase trigger which presses the missile fire key given a voice command "fire". In addition to the key press a new database action will also decrement your missiles variable value by 1 on each execution. </p>
+            <p>You then add a new logical trigger, which executes actions based on simple variable logic (if/else). Simple case is 'if the variable "missiles" is 5' execute action sequence or another trigger, X can be just a speak action "half depleted" or something much more complex...</p>
+            <p>Anyway, that's the basic idea behind the db/logical component. I think this will add a significant amount of flexibility to the tool, since it essentially implements a state machine allowing you to keep track of game/ship components and execute commands automatically based the changing game state.</p>
+			<hr>
+            
+			<p>12/18/14</p>
 			<p>Alpha v0.04 is out, see the <a href="https://github.com/baykovr/AVPI/releases/latest">latest build</a> for more information.</p>
 			<hr>
 			
 			<p>08/07/14</p>
 			<p>Alpha v0.02 is out, see the <a href="https://github.com/baykovr/AVPI/releases/latest">latest build</a> for more information.</p>
 			<hr>
+			
 			<p>07/05/14</p>
 			<p> Test Build 01</p>
 			<p>See release notes: <a href="https://github.com/baykovr/AVPI/releases/tag/v0.01">Build 01</a></p>

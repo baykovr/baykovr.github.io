@@ -7,6 +7,7 @@
 body {
     background: #fffff8;
 }
+
 h1,
 h2,
 h3,
@@ -18,11 +19,14 @@ label {
 }
 a {
     text-decoration: none;
-    color: #6699cc;
+    color: #AC4142;
 }
 a:hover,
 a:focus {
     text-decoration: none;
+}
+ul{
+    list-style-type: none;
 }
 .paper {
     color: #393939;
@@ -88,4 +92,13 @@ main{
     padding: 0.4em 0;
     font-size: 80%;
     letter-spacing: 0.1em;
+}
+/*-Tables-*/
+.pure-table{
+    width: 100%;
+}
+.pure-table thead{
+    color: #fffff8;
+    background: #2d2d2d;
+    cursor: pointer;
 }

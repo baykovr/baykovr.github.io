@@ -9,18 +9,18 @@
 
 
 
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
 
 <script>
 //start-data
-//conference|SP|http://www.ieee-security.org/TC/SP-Index.html
-//paper|Honeywords: Making Password-Cracking Detectable|2012|http://people.csail.mit.edu/rivest/pubs/JR13.pdf|SP
+//conference|SP|https://www.ieee-security.org/TC/SP-Index.html
+//paper|Honeywords: Making Password-Cracking Detectable|2012|https://people.csail.mit.edu/rivest/pubs/JR13.pdf|SP
 //end-data
 </script>
 
@@ -109,15 +109,15 @@
 
 try{
 //start-autogen
-conferences.push( new Conference("SP","http://www.ieee-security.org/TC/SP-Index.html") );
+conferences.push( new Conference("SP","https://www.ieee-security.org/TC/SP-Index.html") );
 
-conferences.push( new Conference("NDSS","http://www.internetsociety.org/events/ndss-symposium/previous-conferences") );
+conferences.push( new Conference("NDSS","https://www.internetsociety.org/events/ndss-symposium/previous-conferences") );
 
 conferences.push( new Conference("USENIX","https://www.usenix.org/conferences/byname/108") );
 
-conferences.push( new Conference("CCS","http://www.acm.org/sigs/sigsac/ccs/") );
+conferences.push( new Conference("CCS","https://www.acm.org/sigs/sigsac/ccs/") );
 
-conferences.push( new Conference("Crypto","http://www.iacr.org/conferences/") );
+conferences.push( new Conference("Crypto","https://www.iacr.org/conferences/") );
 
 conferences.push( new Conference("LEET","https://www.usenix.org/legacy/events/bytopic/leet.html"));
 
@@ -125,19 +125,19 @@ conferences.push( new Conference("PETS","https://petsymposium.org"));
 
 conferences.push( new Conference("ACSAC","https://www.acsac.org/"));
 
-conferences.push( new Conference("RAID","http://www.raid-symposium.org/"));
+conferences.push( new Conference("RAID","https://www.raid-symposium.org/"));
 
 //--CyberProbe Citations
-papers.push( new Paper("SP","2012","Honeywords: Making Password-Cracking Detectable","http://people.csail.mit.edu/rivest/pubs/JR13.pdf",
+papers.push( new Paper("SP","2012","Honeywords: Making Password-Cracking Detectable","https://people.csail.mit.edu/rivest/pubs/JR13.pdf",
     "Honeywords inserts honey-passwords in databases, the use of honey-passwords aids in detection of system intrusion.") );
 
-papers.push(new Paper("NDSS","2014","CyberProbe: Towards Internet-Scale Active Detection of Malicious Servers","http://faculty.cse.tamu.edu/guofei/paper/CyberProbe_NDSS14.pdf",
+papers.push(new Paper("NDSS","2014","CyberProbe: Towards Internet-Scale Active Detection of Malicious Servers","https://faculty.cse.tamu.edu/guofei/paper/CyberProbe_NDSS14.pdf",
     "Leverages machine learning + fingerprinting, active discovery of remote malicious servers."));
 
-papers.push(new Paper("NDSS","2007","Fig: Automatic Fingerprint Generation","http://www.internetsociety.org/sites/default/files/Fig%20Automatic%20Fingerprint%20Generation%20%28Juan%20Caballero%29.pdf",
+papers.push(new Paper("NDSS","2007","Fig: Automatic Fingerprint Generation","https://www.internetsociety.org/sites/default/files/Fig%20Automatic%20Fingerprint%20Generation%20%28Juan%20Caballero%29.pdf",
     "Machine learning for generation of fingerprints (queries) which classify software automatically. Example includes OS and DNS. Problems, Ignores protocol structure, requires matching engine."));
 
-papers.push(new Paper("CCS","2007","Polyglot: Automatic Extraction of Protocol Message Form at Using Dynamic Binary Analysis","http://dl.acm.org/ft_gateway.cfm?id=1315286&ftid=476730&dwn=1&CFID=391697166&CFTOKEN=53149902",
+papers.push(new Paper("CCS","2007","Polyglot: Automatic Extraction of Protocol Message Form at Using Dynamic Binary Analysis","https://dl.acm.org/ft_gateway.cfm?id=1315286&ftid=476730&dwn=1&CFID=391697166&CFTOKEN=53149902",
     "Reverse engineering application-level protocol"));
 
 papers.push(new Paper("NDSS","2008","Corrupted DNS Resolution Paths: The Rise of a Malicious Resolution Authority","https://www.citi.umich.edu/u/provos/papers/ndss08_dns.pdf",
@@ -146,7 +146,7 @@ papers.push(new Paper("NDSS","2008","Corrupted DNS Resolution Paths: The Rise of
 papers.push(new Paper("LEET","2012","So you want to take over a botnet...","https://www.usenix.org/system/files/conference/leet12/leet12-final23.pdf",
     "Botnet arms race, techniques for taking down botnets. Conclusion is that attacking is much easier than defending. Labs are limited in how aggressive they can be in take downs, attackers have no such limitations each lab/corporation is separated unlike very large criminal organizations. A call for collaboration among security researchers. "));
 
-papers.push(new Paper("USENIX","2006","Dynamic application-layer protocol analysis for network intrusion detection","http://static.usenix.org/events/sec06/tech/full_papers/dreger/dreger_html/",
+papers.push(new Paper("USENIX","2006","Dynamic application-layer protocol analysis for network intrusion detection","https://static.usenix.org/events/sec06/tech/full_papers/dreger/dreger_html/",
     "Network intrusion detection system extension for dynamic protocol analysis. Specifically application port misuse, FTP data and IRC botnet comms. No NIDs use criteria other than port #'s for protocol check (2006). Implemented within Bro, and is dependent on it's decoder and signature-matching engine. "));
 
 papers.push(new Paper("USENIX","2013","ZMap: Fast Internet-Wide Scanning and its Security Applications","https://zmap.io/paper.pdf","Fast scanner, utilizes libevent technique, modular and solves many practical issues of previous works. Can be extended to HTTPS if needed, same problem with IPv6, however, packet flooding not feasible in large search space."));
@@ -154,7 +154,7 @@ papers.push(new Paper("USENIX","2013","ZMap: Fast Internet-Wide Scanning and its
 papers.push(new Paper("PETS","2010","How unique is your web browser?","https://panopticlick.eff.org/browser-uniqueness.pdf",
     "TODO"))
 
-papers.push(new Paper("ACSAC","2009","Active botnet probing to identify obscure command and control channels","http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5380679",
+papers.push(new Paper("ACSAC","2009","Active botnet probing to identify obscure command and control channels","https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5380679",
     "Exploration of active probing technique. "));
 
 papers.push(new Paper("USENIX","2012","Mining your ps and qs: Detection of widespread weak keys in network devices","https://www.usenix.org/system/files/conference/usenixsecurity12/sec12-final228.pdf",
@@ -163,49 +163,49 @@ papers.push(new Paper("USENIX","2012","Mining your ps and qs: Detection of wides
 papers.push(new Paper("NDSS","2009","Studying spamming botnets using botlab","https://www.usenix.org/legacy/event/nsdi09/tech/full_papers/john/john_html/",
     "Target on spam botnets, runs bot in sandbox and generates network fingerprint for each binary. Fingerprint is <protocol, IP address, DNS address, port> , major limitation on fingerprint generation is no account for Algorithmic or Random network access (PeerPress)."));
 
-papers.push(new Paper("USENIX","2004","Autograph: Toward automated, distributed worm signature detection","http://static.usenix.org/event/sec04/tech/full_papers/kim/kim_html/",
+papers.push(new Paper("USENIX","2004","Autograph: Toward automated, distributed worm signature detection","https://static.usenix.org/event/sec04/tech/full_papers/kim/kim_html/",
     "Analyzes prevalence of portions of flow payloads, can't handle spoofed source address since it analyzes flows."));
 
-papers.push(new Paper("SP","2005","Remote physical device finger-printing","http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1453529",
+papers.push(new Paper("SP","2005","Remote physical device finger-printing","https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1453529",
     "Leverages clock skews to identify physical device. Compares unique skew between system time and TCP stack time stamp. RFC 1323. Defeated by utilization of NTP or SNTP. Time is synced for enterprise machines on domains as well. Regarding extension, an adversary could actually spoof his physical device if he is aware of this particular technique being used to fingerprint his device."));
 
-papers.push(new Paper("SP","2006","Hamsa: Fast signature generation for zero-day polymorphic worms with provable attack resilience","http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1623999",
+papers.push(new Paper("SP","2006","Hamsa: Fast signature generation for zero-day polymorphic worms with provable attack resilience","https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1623999",
     "Automatic signature generation for Internet worms, as opposed to doing it by hand, improvement over Polygraph. Must deploy on IDS for packet analysis, Snort/Bro. Problem space is NP-Hard. Speed in analysis is key in improvement to current work."));
 
-papers.push(new Paper("NDSS","2008","Automatic protocol format reverse engineering through context-aware monitored execution","http://www.internetsociety.org/sites/default/files/lin_1.pdf",
+papers.push(new Paper("NDSS","2008","Automatic protocol format reverse engineering through context-aware monitored execution","https://www.internetsociety.org/sites/default/files/lin_1.pdf",
     "Uses dynamic trace analysis extract fields from program execution, the problem with this being that a protocol message must occur during analysis, this may be extremely time consuming if an adversary puts a very rare message into the protocol. Examines at byte level (8-bit chunks) requires modification to code base to account for this. No correlation between multiple messages, thus ignoring any complex interaction in a protocol messages."));
 
 papers.push(new Paper("USENIX","2008"," All your iframes point to us","https://www.usenix.org/legacy/event/sec08/tech/full_papers/provos/provos.pdf",
     "Study of drive by downloads, which are currently the most popular malware distribution technique. Exploits the browser or one of its plugins to gain access. Technique took 7 months to gather results, so obviously a major limitation is that its not real time. Would be interesting to improve the speed to something reasonable, say 24 hours for a semi-live blacklist of malicious URLs."));
 
-papers.push(new Paper("RAID","2013","Firma: malware clustering and network signature generation with mixed network behaviors","http://software.imdea.org/~juanca/papers/firma_raid13.pdf","D"));
+papers.push(new Paper("RAID","2013","Firma: malware clustering and network signature generation with mixed network behaviors","https://software.imdea.org/~juanca/papers/firma_raid13.pdf","D"));
 
-papers.push(new Paper("USENIX","2012","Netmap: A novel framework for fast packet i/o","http://www.cs.otago.ac.nz/cosc440/readings/p45-rizzo.pdf",
+papers.push(new Paper("USENIX","2012","Netmap: A novel framework for fast packet i/o","https://www.cs.otago.ac.nz/cosc440/readings/p45-rizzo.pdf",
     "Fast technique for packet generation, specifically TCP-SYN spam for extremely fast Internet-Wide scanning. Limitations : not very useful for IPv6, search space is much too large. Like all scanners heavier packets, (HTTP) are no where near as fast, cannot handle complex interaction such as HTTPS handshake."));
 
 papers.push(new Paper("USENIX","2002","How to 0wn the internet in your spare time","https://www.usenix.org/legacy/publications/library/proceedings/sec02/full_papers/staniford/staniford_html/index.html",
     "An introductory to botnets and DDOS."));
 
-papers.push(new Paper("CCS","2009","Your botnet is my botnet Analysis of a botnet takeover","http://www.net.t-labs.tu-berlin.de/teaching/ws0910/IS_seminar/papers/torpig.pdf",""));
+papers.push(new Paper("CCS","2009","Your botnet is my botnet Analysis of a botnet takeover","https://www.net.t-labs.tu-berlin.de/teaching/ws0910/IS_seminar/papers/torpig.pdf",""));
 
-papers.push(new Paper("CCS","2012","Peerpress Utilizing enemies p2p strength against them","http://web2.research.att.com/techdocs/TD_100785.pdf",
+papers.push(new Paper("CCS","2012","Peerpress Utilizing enemies p2p strength against them","https://web2.research.att.com/techdocs/TD_100785.pdf",
     "Dynamic analysis using path exploration, precursor to proactive scanning."));
 //--/CyberProbe Citations
 //--AutoProbe Citations
-papers.push(new Paper("NDSS","2010","Binary code extraction and interface identification for security applications","http://nozdr.ru/data/media/biblioteka/kolxo3/Cs_Computer_science/CsLn_Lecture%20notes/I/Information%20Systems%20Security,%204%20conf.,%20ICISS%202008(LNCS5352,%20Springer,%202008)(ISBN%209783540898610)(316s).pdf",
+papers.push(new Paper("NDSS","2010","Binary code extraction and interface identification for security applications","https://nozdr.ru/data/media/biblioteka/kolxo3/Cs_Computer_science/CsLn_Lecture%20notes/I/Information%20Systems%20Security,%204%20conf.,%20ICISS%202008(LNCS5352,%20Springer,%202008)(ISBN%209783540898610)(316s).pdf",
     "TODO"));
 
-papers.push(new Paper("CCS","2009","Enabling active botnet infiltration using automatic protocol reverse engineering","http://bitblaze.cs.berkeley.edu/papers/dispatcher_ccs09.pdf",
+papers.push(new Paper("CCS","2009","Enabling active botnet infiltration using automatic protocol reverse engineering","https://bitblaze.cs.berkeley.edu/papers/dispatcher_ccs09.pdf",
     "TODO"));
 
-papers.push(new Paper("SP","2009","Prospex Protocol specification extraction","http://security.riit.tsinghua.edu.cn/mediawiki/images/8/87/Prospex-paper.pdf",
+papers.push(new Paper("SP","2009","Prospex Protocol specification extraction","https://security.riit.tsinghua.edu.cn/mediawiki/images/8/87/Prospex-paper.pdf",
     "Automatically infers state machines, uses execution trace technique (dynamic) to monitor system calls."));
 
 papers.push(new Paper("USENIX","2008","BotMiner: Clustering Analysis of Network Traffic for Protocol- and Structure-Independent Botnet Detection","https://www.usenix.org/legacy/event/sec08/tech/full_papers/gu/gu_html/index.html","Generic framework for the detection of bot's on networks. Utilizes flow and activity analysis/correlation. A-plane correlation focuses on external activity, that is scan/spam/binarydl/exploit which is correlated with the C-plane, this however does not take into account internal activity popular today (e.g. bitcoin mining, bank account data extraction) call it I-plane. Additionally SSH2/VPN/Tor Tunneling (e.g. Mevade, Sefnit) causes problems. A-plane correlation may be extremely difficult, considering the requirement to deploy IDS at a global scale as in Analysis of a /0 stealth scan from a botnet] which shows an extremely distributed scan which BotMiner would likely not detect."));
 
-papers.push(new Paper("NDSS","2008","BotSniffer: Detecting Botnet Command and Control Channels in Network Traffic","http://corescholar.libraries.wright.edu/cgi/viewcontent.cgi?article=1006&context=cse","C-Plane correlation from botminer, statistical analysis of C&C patterns to detect bots. Does not require prior knowledge of c&c."));
+papers.push(new Paper("NDSS","2008","BotSniffer: Detecting Botnet Command and Control Channels in Network Traffic","https://corescholar.libraries.wright.edu/cgi/viewcontent.cgi?article=1006&context=cse","C-Plane correlation from botminer, statistical analysis of C&C patterns to detect bots. Does not require prior knowledge of c&c."));
 
-papers.push(new Paper("USENIX","2007","BotHunter: Detecting Malware Infection Through IDS-Driven Dialog Correlation","http://static.usenix.org/legacy/events/sec07/tech/full_papers/gu/gu_html/","Focuses on infection detection. Passive monitoring technique."));
+papers.push(new Paper("USENIX","2007","BotHunter: Detecting Malware Infection Through IDS-Driven Dialog Correlation","https://static.usenix.org/legacy/events/sec07/tech/full_papers/gu/gu_html/","Focuses on infection detection. Passive monitoring technique."));
 
 //--/AutoProbe Citations
 //end-autogen

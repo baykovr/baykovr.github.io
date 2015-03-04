@@ -16,6 +16,7 @@
 		{
 			HOME : 0,
 			LINKS: 1,
+			SRG  : 2
 		};
 		
 		var curr_content;
@@ -25,17 +26,19 @@
 			curr_content = content_id;
 			switch(content_id)
 			{
-				case 0:
+				case content.HOME:
 					$(function(){ $("#main-content").load("content/home.html"); });
 					break;
-				case 1:
+				case content.LINKS:
 					$(function(){ $("#main-content").load("content/links.html"); });
+					break;
+				case content.SRG:
+					$(function(){ $("#main-content").load("content/srg.html"); });
 					break;
 				default:
 					break;
 			}
 		}
-		
 		window.onload = function check_content() {if(!curr_content){swap_content(content.HOME);}}
     </script>
 
@@ -50,6 +53,9 @@
 				<li><a>|</a></li>
 				
 				<li><a onClick="swap_content(content.LINKS)" href="javascript:void(0);">Links</a></li>
+				<li><a>|</a></li>
+				
+				<li><a onClick="swap_content(content.SRG)" href="javascript:void(0);">SRG</a></li>
 				<li><a>|</a></li>
 				
 				<li><a href="https://github.com/baykovr">Git</a></li>

@@ -1,50 +1,54 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="readings.">
-<title>SRG</title>
-    <link rel="stylesheet" href="css/pure-min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<h3 class="content-head">NDSS 2015</h3>
+<table class="pure-table pure-table-horizontal">
+	<thead>
+		<tr>
+			<th>Date</th></th><th>Paper</th><th>Presenter</th><th>Slides</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>TBA</td>
+			<td>
+				<a href="https://www.internetsociety.org/doc/sphinx-detecting-security-attacks-software-defined-networks">
+				SPHINX: Detecting Security Attacks in SDN
+				</a>
+			</td>
+			<td>Robert</td>
+			<td>
+				<a href="#none-yet"><i class="fa fa-external-link"></i></a>
+			</td>
+		</tr>
+		<tr>
+			<td>TBA</td>
+			<td>
+				<a href="https://www.internetsociety.org/doc/securing-software-defined-network-control-layer">
+				Securing the Software Defined Network Control Layer
+				</a>
+			</td>
+			<td>Robert</td>
+			<td>
+				<a href="#none-yet"><i class="fa fa-external-link"></i></a>
+			</td>
+		</tr>
+		
+	</tbody>
+</table>
 
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="css/main.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<style type="text/css">
-	*{font-family: 'Ubuntu Mono','sans-serif';}
-	</style>
-</head>
-
-<body>
-<div id="layout">
-	<div class="header">
-    	<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-    <ul>
-        <li><a href="index.html">Robert A. Baykov</a></li>
-        <li><a>|</a></li>
-        <li><a href="links.html">Links</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a>|</a></li>
-        <li><a href="https://github.com/baykovr">Git</a></li>
-        <li><a href="gavpi.html">GAVPI</a></li>
-    </ul>
-
-    </div>
-	</div>
-	</div>
-	<div id="main">
-        <div class="content">
-			<h3 class="content-subhead">January 21,2015</h3>
-            <h4>Jialong Zhang</h4>
-            <a href="https://www.srl.inf.ethz.ch/papers/pldi12-wr.pdf">Race Detection for Web Applications" (PLDI 2012)</a>
-            <p>Short Talks</p>
-                <ul>
-                    <li>placeholder</li>
-                </ul>
-		</div>
-	</div>
-</div>
-</body>
-</html>
+<script type="text/javascript">
+//--Table Sorting
+$('th').click(function(){
+var table = $(this).parents('table').eq(0)
+var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+this.asc = !this.asc
+if (!this.asc){rows = rows.reverse()}
+for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+})
+function comparer(index) {
+return function(a, b) {
+	var valA = getCellValue(a, index), valB = getCellValue(b, index)
+	return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.localeCompare(valB)
+}
+}
+function getCellValue(row, index){ return $(row).children('td').eq(index).html() }
+//--/Table Sorting
+</script>

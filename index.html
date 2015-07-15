@@ -32,9 +32,9 @@
 				case content.LINKS:
 					$(function(){ $("#main-content").load("content/links.html"); });
 					break;
-				case content.SRG:
-					$(function(){ $("#main-content").load("content/srg.html"); });
-					break;
+				// case content.SRG:
+				// 	$(function(){ $("#main-content").load("content/srg.html"); });
+				// 	break;
 				default:
 					break;
 			}
@@ -50,15 +50,19 @@
 		<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
 			<ul>
 				<li><a onClick="swap_content(content.HOME)" href="javascript:void(0);">Robert A. Baykov</a></li>
+				
 				<li><a>|</a></li>
 				
+				<li><a href="https://github.com/baykovr"><i class="fa fa-github"></i></a></li>
+
+				<li><a>|</a></li>
+
 				<li><a onClick="swap_content(content.LINKS)" href="javascript:void(0);">Links</a></li>
+				
 				<li><a>|</a></li>
 				
-				<li><a onClick="swap_content(content.SRG)" href="javascript:void(0);">SRG</a></li>
-				<li><a>|</a></li>
+				<!-- <li><a onClick="swap_content(content.SRG)" href="javascript:void(0);">SRG</a></li> -->
 				
-				<li><a href="https://github.com/baykovr">Git</a></li>
 			</ul>
 		</div>
     </div>

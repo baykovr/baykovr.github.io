@@ -6,66 +6,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="some desc.">
     <link rel="stylesheet" href="css/pure-min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script> 
-		var content = 
-		{
-			HOME : 0,
-			LINKS: 1,
-			SRG  : 2
-		};
-		
-		var curr_content;
-		
-		function swap_content(content_id)
-		{
-			curr_content = content_id;
-			switch(content_id)
-			{
-				case content.HOME:
-					$(function(){ $("#main-content").load("content/home.html"); });
-					break;
-				case content.LINKS:
-					$(function(){ $("#main-content").load("content/links.html"); });
-					break;
-				case content.SRG:
-					$(function(){ $("#main-content").load("content/srg.html"); });
-					break;
-				default:
-					break;
-			}
-		}
-		window.onload = function check_content() {if(!curr_content){swap_content(content.HOME);}}
-    </script>
 
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <div id="layout">
     <div class="header">
 		<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+			
 			<ul>
-				<li><a onClick="swap_content(content.HOME)" href="javascript:void(0);">Robert A. Baykov</a></li>
+				<li><a href="https://baykovr.github.io">Robert A. Baykov</a></li>
 				<li><a>|</a></li>
-				
-				<li><a onClick="swap_content(content.LINKS)" href="javascript:void(0);">Links</a></li>
-				<li><a>|</a></li>
-				
-				<li><a onClick="swap_content(content.SRG)" href="javascript:void(0);">SRG</a></li>
-				<li><a>|</a></li>
-				
-				<li><a href="https://github.com/baykovr">Git</a></li>
+				<li><a href="https://github.com/baykovr"><i class="fa fa-github" aria-hidden="true"></i></a> </li>
+				<li><a href="https://www.linkedin.com/in/baykovr"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
 			</ul>
 		</div>
     </div>
     
     <div id="main">
         <div class="content">
-			<div id="main-content"></div>
+			<div id="main-content">
+				<h3 class="content-subhead">Research</h3>
+				<p>My research interest is in network and system security. I enjoy building practical and useful tools 
+				to address problems in this area. Much of my work is
+				free and open source for anyone to use.</p>
+				<ul>
+					<li>My current focus is in Software Defined Networking (SDN) security.</li>
+					<li>Mobile security (Android System).</li>
+					<li>Network scanning/surveying. </li>
+				</ul>
+				</p>
+					
+				<h3 class="content-subhead">Publications</h3>
+				<p>Sungmin Hong, Robert Baykov, Lei Xu, Srinath Nadimpalli, Guofei Gu. "Towards SDN-Defined Programmable BYOD (Bring Your Own Device) Security." To appear in Proc. of the Network and Distributed System Security Symposium (NDSS'16), San Diego, California, Feb. 2016</p>
+
+				<p>Zhaoyan Xu, Antonio Nappa, Robert Baykov, Guangliang Yang, Juan Caballero, and Guofei Gu. "AutoProbe: Towards Automatic Active Malicious Server Probing Using Dynamic Binary Analysis." In Proc. of the 21st ACM Conference on Computer and Communications Security (CCS’14), Scottsdale, AZ, November 2014</p>
+
+				<h2 class="content-subhead">Contact</h2>
+				<p>baykovr@cs.tamu.edu</p>
+			</div>
         </div>
 	<div>
 </div>

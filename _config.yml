@@ -1,0 +1,20 @@
+#google_analytics: UA-NNNNNNNN-N
+
+#footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+#listen_for_clients_preferred_style: true # true or false (default)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+title: Baykov Engineering
+tagline: technical writing on security and cloud engineering
+url: https://baykovr.github.io
+author: baykovr
+logo: /assets/logo.png
+
+header_pages:
+  - index.md
+  - posts.md
+
+style: light
+

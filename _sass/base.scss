@@ -133,3 +133,9 @@ pre { background-color: var(--background-color);  border: 1px solid;  padding: 8
 
 
 .img-small-right { width: 300px; float: right; margin: 0 5px;}
+@media screen and (max-width: 600px) {
+    .img-small-right {
+        width: 100px;
+        margin: 0 10px;
+    }
+}

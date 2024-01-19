@@ -16,7 +16,7 @@ build:
 
 .PHONY: serve
 serve:
-	@$(CMD) --run "bundle exec jekyll serve"
+	@$(CMD) --run "bundle exec jekyll serve --port 4000"
 
 .PHONY: clean
 clean:

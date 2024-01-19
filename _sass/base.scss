@@ -3,12 +3,12 @@
 /**
  * Style variables
  */
-$base-font-family:     'Victor Mono', monospace !default;
+$base-font-family:     'Inconsolata', 'Victor Mono', monospace !default;
 $base-font-size:       16px !default;
-$mobile-font-size:     12px !default;
+$mobile-font-size:     16px !default;
 $base-line-height:     1.5 !default;
 $container-width:      90% !default;
-$container-max-width:  900px !default;
+$container-max-width:  800px !default;
 
 /**
  * Global
@@ -132,4 +132,33 @@ pre { background-color: var(--background-color);  border: 1px solid;  padding: 8
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
 
 
-.img-small-right { width: 300px; float: right; margin: 0 5px;}
+.img-small-right { 
+  width: 300px; 
+  float: right; 
+  margin: 0 5px;
+  border: 1px solid;
+  padding: 2px;
+}
+@media screen and (max-width: 600px) {
+    .img-small-right {
+        width: 100px;
+        margin: 0 10px;
+        passing: 2px;
+        border: 1px solid;
+    }
+}
+
+html {
+    margin: 0px 5% 0px 5%;
+  --c1: #839496;
+  --c2: #697fa5;
+  --c3: #fffcf5;
+  --c4: #93a1a1;
+  
+  // background:
+  //   conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
+  //   conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
+  //   conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
+  //   conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
+  // background-size: 150px 150px; /* control the size here */
+}

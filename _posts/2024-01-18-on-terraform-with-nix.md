@@ -8,14 +8,14 @@ categories: cloud
 # Nix and Terraform Beginnings
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
-This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing). I enjoy reading and hearing about new tools and techniques, especially when an approach to a problem is different.
+This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing). I enjoy reading and hearing about new tools and techniques, especially when an approach to a problem is unique.
 
 Our trade moves quickly, and as new tools come and go there is a tendency for me to try to hold on tightly to the [tried and true](https://mcfunley.com/choose-boring-technology). However it is worthwhile to step out of my comfort zone on occasion. 
 
 In nix, I took more than a few steps out.
 
 ## Starting Out
-My goal is to package up the terraform binary exactly with all of dependencies required to run it, such that execution is consistent across different environments (e.g. my machine, a ci system, your machine).
+My goal is to package up the terraform binary exactly with all of dependencies required to run it such that execution is consistent across different environments (e.g. my machine, a ci system, your machine).
 
 So when working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.
 

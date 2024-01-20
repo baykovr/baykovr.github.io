@@ -15,9 +15,9 @@ Our trade moves quickly, and as new tools come and go there is a tendency for me
 In nix, I took more than a few steps out.
 
 ## Starting Out
-My goal is to package up the terraform binary exactly with all of dependencies required to run it such that execution is consistent across different environments (e.g. my machine, a ci system, your machine).
+My goal is to package up my terraform code and dependencies such that it runs consistent across different environments (e.g. my machine, a ci system, your machine).
 
-So when working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.
+When working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.
 
 Using volume mounts to `~/.aws/credentials` a remote state storage and [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) can get us very close to the CI system environment - all prior to commiting our code for testing.
 

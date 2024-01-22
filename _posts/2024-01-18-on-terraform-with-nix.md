@@ -19,7 +19,7 @@ One of the many things I try to ensure when shipping production software is port
 
 I like to joke about building things the soviet way. Sturdy like my grandmothers refridgerator which still functions after fourty years. This may not be good for sales figures, but the engineers must be happy. If I can build software that can take that level of temporal abuse I'll be happy too.
 
-I'm finding that using nix allows me to build much more robust systems than before, truely hermetic. My approach is to _incrementally_ update my tooling and methods where I feel it makes sense - or just learn a new angle.
+I'm finding that using nix allows me to build much more robust systems than before, truly hermetic. My approach is to _incrementally_ update my tooling and methods where I feel it makes sense - or just learn a new angle.
 
 ### Existing Tools
 When working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.

@@ -8,9 +8,7 @@ categories: cloud
 # Nix and Terraform Beginnings
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
-This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing). I enjoy reading and hearing about new tools and techniques, especially when an approach to a problem is unique.
-
-Our trade moves quickly, and as new tools come and go there is a tendency for me to try to hold on tightly to the [tried and true](https://mcfunley.com/choose-boring-technology). However it is worthwhile to step out of my comfort zone on occasion.
+This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing).
 
 ## Starting Out
 My goal for today is to package up my terraform code and its dependencies. This package should be portable to many systems and it should be reproducible. Truth be told, I can already accomplish this with my [existing tools](#existing-tools), but nix offers a learning opportunity to improve them.

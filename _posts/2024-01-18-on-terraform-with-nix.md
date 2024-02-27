@@ -8,9 +8,7 @@ categories: cloud
 # Nix and Terraform Beginnings
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
-This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing). I enjoy reading and hearing about new tools and techniques, especially when an approach to a problem is unique.
-
-Our trade moves quickly, and as new tools come and go there is a tendency for me to try to hold on tightly to the [tried and true](https://mcfunley.com/choose-boring-technology). However it is worthwhile to step out of my comfort zone on occasion.
+This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing).
 
 ## Starting Out
 My goal for today is to package up my terraform code and its dependencies. This package should be portable to many systems and it should be reproducible. Truth be told, I can already accomplish this with my [existing tools](#existing-tools), but nix offers a learning opportunity to improve them.
@@ -19,7 +17,7 @@ One of the many things I try to ensure when shipping production software is port
 
 I like to joke about building things the soviet way. Sturdy like my grandmothers refridgerator which still functions after fourty years. This may not be good for sales figures, but the engineers must be happy. If I can build software that can take that level of temporal abuse I'll be happy too.
 
-I'm finding that using nix allows me to build much more robust systems than before, truely hermetic. My approach is to _incrementally_ update my tooling and methods where I feel it makes sense - or just learn a new angle.
+I'm finding that using nix allows me to build much more robust systems than before, truly hermetic. My approach is to _incrementally_ update my tooling and methods where I feel it makes sense - or just learn a new angle.
 
 ### Existing Tools
 When working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.

@@ -132,11 +132,19 @@ pre { background-color: var(--background-color);  border: 1px solid;  padding: 8
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
 
 
-.img-small-right { width: 300px; float: right; margin: 0 5px;}
+.img-small-right { 
+  width: 300px; 
+  float: right; 
+  margin: 0 5px;
+  border: 1px solid;
+  padding: 2px;
+}
 @media screen and (max-width: 600px) {
     .img-small-right {
         width: 100px;
         margin: 0 10px;
+        passing: 2px;
+        border: 1px solid;
     }
 }
 

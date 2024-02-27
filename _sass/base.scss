@@ -144,13 +144,13 @@ html {
     margin: 0px 5% 0px 5%;
   --c1: #839496;
   --c2: #697fa5;
-  --c3: #eee8d5;
+  --c3: #fbf7ed;
   --c4: #93a1a1;
   
-  background:
-    conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
-    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
-    conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
-    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
-  background-size: 150px 150px; /* control the size here */
+  // background:
+  //   conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
+  //   conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
+  //   conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
+  //   conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
+  // background-size: 150px 150px; /* control the size here */
 }

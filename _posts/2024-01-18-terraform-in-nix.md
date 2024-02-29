@@ -1,28 +1,25 @@
 ---
 layout: post
-title: Nix and Terraform Beginnings
+title: Terraform in Nix
 date:   2024-01-18
 categories: cloud
 ---
 
-# Nix and Terraform Beginnings
+# Terraform in Nix
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
 This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing).
+In this post we will explore using nix as a type of virtual environment (specifically nix-shell) for terraform workflows.
+We will cover shell composition and provider management, which in my opinion is a unique and interesting attribute, as as operation and docker interoperability.
+#--
 
-## Starting Out
-My goal for today is to package up my terraform code and its dependencies. This package should be portable to many systems and it should be reproducible. Truth be told, I can already accomplish this with my [existing tools](#existing-tools), but nix offers a learning opportunity to improve them.
+## Background
+When working with terraform I typically use [tfenv](https://github.com/tfutils/tfenv) and a docker image which matches the build system. The image is particularly useful when debugging across multiple environments. But even if you do not use a build/deploy server, the team will benefit from using the exact same tools.
 
-One of the many things I try to ensure when shipping production software is portability and reproducibility. It is significantly more work, but I worry less down the road and feel fulfilled as an engineer in doing so.
+Having recently finished a small nix workflow for a python + lambda environment, I wanted to find out what benefits could be brought to terraform.
 
-I like to joke about building things the soviet way. Sturdy like my grandmothers refridgerator which still functions after fourty years. This may not be good for sales figures, but the engineers must be happy. If I can build software that can take that level of temporal abuse I'll be happy too.
 
-I'm finding that using nix allows me to build much more robust systems than before, truly hermetic. My approach is to _incrementally_ update my tooling and methods where I feel it makes sense - or just learn a new angle.
-
-### Existing Tools
-When working with terraform I usually use [tfenv](https://github.com/tfutils/tfenv) and a docker image with the exact version of the terraform binary pinned down. I test small changes using the local binary supplied by tfenv, then switch to a container which matches my CI environment.
-
-Using volume mounts to `~/.aws/credentials` a remote state storage and [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) can get us very close to the CI system environment - all prior to commiting our code for testing.
+Volume mounting `~/.aws/credentials` a remote state storage and [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) can get us very close to the CI system environment - all prior to commiting our code for testing.
 
 Additionally I usually use makefiles to wrap commands I would normally type by hand. This allows me to add utilities into the workflow such as [tfsec](https://github.com/aquasecurity/tfsec), generate documentation and eliminate having to remember commands. This does wonders for portability to other users.
 

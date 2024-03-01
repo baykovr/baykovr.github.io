@@ -9,15 +9,19 @@ categories: cloud
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
 This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing).
-In this post we will explore using nix as a type of virtual environment (specifically nix-shell) for terraform workflows.
-We will cover shell composition and provider management, which in my opinion is a unique and interesting attribute, as as operation and docker interoperability.
-#--
+In this post we will explore using nix for dependency encapsulation for terraform. We'll cover
+shell composition, provider management and docker interoperability.
+
+## Motivation
+Why should we use nix at all.
+
 
 ## Background
-When working with terraform I typically use [tfenv](https://github.com/tfutils/tfenv) and a docker image which matches the build system. The image is particularly useful when debugging across multiple environments. But even if you do not use a build/deploy server, the team will benefit from using the exact same tools.
+When working with terraform I typically use [tfenv](https://github.com/tfutils/tfenv) and a docker image which matches the build system.
 
-Having recently finished a small nix workflow for a python + lambda environment, I wanted to find out what benefits could be brought to terraform.
+On NixOS based systems, neither is necessary. 
 
+The image is particularly useful when debugging across multiple environments. But even if you do not use a build/deploy server, the team will benefit from using the exact same tools.
 
 Volume mounting `~/.aws/credentials` a remote state storage and [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) can get us very close to the CI system environment - all prior to commiting our code for testing.
 

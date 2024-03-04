@@ -8,18 +8,74 @@ categories: cloud
 # Terraform in Nix
 ---
 ![gpts-idea-of-hand-planes](/assets/gpt-planes.png){:class="img-small-right"}
-This past year I have been using a fair bit of [nix](https://nixos.org) at [integrated reasoning](https://reason.ing).
-In this post we will explore using nix for dependency encapsulation for terraform. We'll cover
-shell composition, provider management and docker interoperability.
 
-## Motivation
-Why should we use nix at all.
+## About
+Presented here is a new technique for managing terraform environments via [nix](https://nixos.org/).
 
+This approach provides a guaranteed terraform and provider dependency version match as a shell environment and oci image alike.
+
+The main advantage of this approach is the _decoupling_ of the terraform environment from the local system, similar to the function virtualenv provides to python. 
+
+Furthermore, we are able to package this environment as a deployable artifact such an oci image for use remotely without the need to maintain a separate Dockerfile.
 
 ## Background
-When working with terraform I typically use [tfenv](https://github.com/tfutils/tfenv) and a docker image which matches the build system.
+We denote a terraform environment as the composition of the terraform binary, source code and source dependencies (i.e. modules) as well as binary provider dependencies.
 
-On NixOS based systems, neither is necessary. 
+Such a composition is commonly achieved via a custom Dockerfile, through the use of pre-made [image](https://hub.docker.com/r/hashicorp/terraform) or an auxiliary utility such as [terragrunt](https://github.com/gruntwork-io/terragrunt).
+
+ or ad-hoc installation of specific terraform binaries locally. 
+
+It is desirable and often necessary to guarantee a reproducible composition of the above in order to provide accurate and error free infrastructure management.
+
+## Approach
+We express 
+
+```nix
+{
+  description = "a sample environment";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    utils.url = "github:numtide/flake-utils/v1.0.0";
+  };
+
+  outputs = { self, nixpkgs, utils }:
+    utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs { 
+          inherit system;
+          config = {
+            allowUnfreePredicate = pkg: builtins.elem(nixpkgs.lib.getName pkg)[
+              "terraform"
+            ];
+          };
+        };
+        
+        tf = pkgs.terraform.withPlugins(plugin: [
+          pkgs.terraform.plugins.aws
+        ]);
+        
+      in 
+        {
+          shell = pkgs.mkShell rec {
+            buildInputs = [ tf ];
+            shellHook = ''
+              terraform version
+            '';
+          };
+
+          image = pkgs.dockerTools.buildImage {
+            name = "tf-img-example";
+            tag = "latest";
+            copyToRoot = [ tf ];
+            config = {
+              Cmd = [ "${tf}/bin/terraform" ];
+            };
+          };
+        }
+    );
+}
+```
 
 The image is particularly useful when debugging across multiple environments. But even if you do not use a build/deploy server, the team will benefit from using the exact same tools.
 
@@ -158,47 +214,3 @@ on linux_amd64
 
 # Complete Example
 Remember when the exam question was vastly more complicated than the homework problems, using nix is a lot like that.
-
-```nix
-{
-  description = "an example";
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
-    utils.url = "github:numtide/flake-utils/v1.0.0";
-  };
-
-  outputs = { self, nixpkgs, utils }:
-    utils.lib.eachDefaultSystem (system:
-    let
-      pkgs = import nixpkgs { 
-        inherit system;
-        config = {
-          allowUnfreePredicate = pkg: builtins.elem(nixpkgs.lib.getName pkg)[
-            "terraform"
-          ];
-        };
-      };
-      tf = pkgs.terraform.withPlugins(plugin: [
-        pkgs.terraform.plugins.aws
-      ]);
-      in 
-      {
-        shell = pkgs.mkShell rec {
-          buildInputs = [ tf ];
-          shellHook = ''
-            terraform version
-          '';
-        };
-
-        image = pkgs.dockerTools.buildImage {
-          name = "tf-img";
-          tag = "latest";
-          copyToRoot = [ tf ];
-          config = {
-            Cmd = [ "${tf}/bin/terraform" ];
-          };
-        };
-      }
-  );
-}
-```

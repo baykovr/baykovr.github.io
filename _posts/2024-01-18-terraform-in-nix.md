@@ -7,7 +7,7 @@ categories: cloud
 
 # Terraform in Nix
 ---
-Presented here is a technique for managing terraform environments via [nix](https://nixos.org/).
+Here is a technique for managing terraform environments via [nix](https://nixos.org/).
 
 This approach provides a guaranteed terraform and provider dependency version match which may be used as reproducible and convenient development environment. 
 
